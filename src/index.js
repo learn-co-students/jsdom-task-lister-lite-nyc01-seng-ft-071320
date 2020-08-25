@@ -63,6 +63,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   
-//sort function:
-// first step: sort by numerical value
-// for li.value
