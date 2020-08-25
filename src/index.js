@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     del.innerText = "X";
     let selection = document.getElementById("selection");
     let textColor = selection.value;
+    //if selection value equal to color, 
     li.style.color = textColor
     
     del.addEventListener("click", function(e) {
@@ -36,8 +37,32 @@ document.addEventListener("DOMContentLoaded", () => {
     taskList.appendChild(li);
     field.value = "";
   });
+
+  let sortButton = document.querySelector('#sort');
+
+  sortButton.addEventListener("click", function(e){
+    let currentTasks = document.querySelectorAll("li");
+    let redDiv = document.querySelector("#redDiv");
+    let yellowDiv = document.querySelector("#yellowDiv");
+    let greenDiv = document.querySelector("#greenDiv");
+
+    for(let i=0; i<currentTasks.length; i++) {
+      let li = currentTasks[i];
+      if (li.style.color === "red") {
+        redDiv.appendChild(li);
+      } else if (li.style.color === "yellow") {
+        yellowDiv.appendChild(li);
+      } else if (li.style.color === "green") {
+        greenDiv.appendChild(li);
+      }
+    }
+  });
+
   
 
   });
 
   
+//sort function:
+// first step: sort by numerical value
+// for li.value
