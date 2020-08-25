@@ -21,32 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
   submit.addEventListener("click", function(e){
     e.preventDefault();
     let li = document.createElement("li")
+    let del = document.createElement("button")
+    del.type = "button";
+    del.innerText = "X";
+    let selection = document.getElementById("selection");
+    let textColor = selection.value;
+    li.style.color = textColor
+    
+    del.addEventListener("click", function(e) {
+      li.remove()
+    });
     li.innerText = taskName();
+    li.appendChild(del);
     taskList.appendChild(li);
     field.value = "";
   });
+  
 
+  });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-});
+  
