@@ -8,13 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const input = document.querySelector("#new-task-description").value
     const taskLi = document.createElement("li")
     taskLi.textContent = input
+
     const todoUl = document.querySelector("#tasks")
     todoUl.append(taskLi)
     form.reset()
+
     const deleteButton = document.createElement("BUTTON")
     deleteButton.innerText = "Delete"
     taskLi.append(deleteButton)
-
     deleteButton.addEventListener('click', e => {
       taskLi.remove()
     })
