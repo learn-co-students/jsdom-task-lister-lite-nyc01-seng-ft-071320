@@ -63,3 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   
+
+
+  //cody d's solution used this to automatically sort after submission:
+  // if (createList.style.backgroundColor == "green") {
+  //   list.append(createList)
+  // }
+
+  // if (createList.style.backgroundColor == "red") {
+  //   list.prepend(createList)
+  // }
+
+  // if (createList.style.backgroundColor == "yellow") {
+  //   list.insertBefore(createList, document.querySelector(".green"))
+  // }
